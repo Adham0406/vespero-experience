@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#121010" />
+    <meta name="description" content="The Vespero Experience — an interactive, hand-engraved scroll story about three evening spirits." />
+    <title>The Vespero Experience</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script type="module" crossorigin src="./assets/index-BS7gRUvl.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-OPyEsUUI.css">
+  </head>
+  <body>
+    <div id="loader">
+      <div class="loader-logo">Vespero<small>Spirits</small></div>
+      <div class="loader-bar"><i></i></div>
+    </div>
+
+    <canvas id="stage" aria-hidden="true"></canvas>
+
+    <header class="ui top">
+      <a class="logo" href="#" data-action="top" aria-label="Vespero Spirits">
+        <span class="logo-script">Vespero</span><span class="logo-sub">Spirits</span>
+      </a>
+      <nav class="nav">
+        <a href="#" class="active" data-action="top">Experience</a>
+        <span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>
+        <a href="#" data-action="collection">Collection</a>
+      </nav>
+    </header>
+
+    <div id="captions" aria-live="polite"></div>
+
+    <div id="cursor" aria-hidden="true"><span></span></div>
+    <button id="hold-btn" class="ui" type="button"><span></span></button>
+    <div id="scroll-hint"><span>Scroll to begin</span><i></i></div>
+    <div id="progress" aria-hidden="true"><i></i></div>
+
+    <section id="endcard">
+      <div class="end-logo">Vespero</div>
+      <p class="end-tag">Taste the evening.</p>
+      <div class="end-actions">
+        <button type="button" data-action="replay">Replay the experience</button>
+        <button type="button" class="ghost" data-action="collection">See the collection</button>
+      </div>
+      <small>Please enjoy responsibly. A fictional brand created for this interactive experience.</small>
+    </section>
+
+    <div id="collection" class="modal" data-lenis-prevent>
+      <div class="modal-box">
+        <button class="close" type="button" data-close aria-label="Close">×</button>
+        <h2>The Collection</h2>
+        <p class="lead">Three evenings, bottled. Pick the one that follows you into the story.</p>
+        <div id="collection-list"></div>
+      </div>
+    </div>
+
+    <div id="track"></div>
+  </body>
+</html>
